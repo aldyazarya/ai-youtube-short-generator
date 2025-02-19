@@ -1,6 +1,6 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import ThemeProvider from "./theme-provider";
+import ConvexClientProvider from "./ConvexClientProvider";
 
 const jakarta_sans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body className={jakarta_sans.className}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>
   );
