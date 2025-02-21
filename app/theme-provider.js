@@ -14,15 +14,13 @@ function ThemeProvider({ children }) {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      setUser(user);
-
       const result = await CreateUser({
         name: user?.displayName,
         email: user?.email,
         pictureURL: user?.photoURL,
       });
       console.log("result", result);
-      
+      setUser(result);
     });
     return () => unsubscribe();
   }, []);
