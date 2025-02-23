@@ -57,7 +57,7 @@ function AppSidebar() {
         <div>
           <div className=" flex items-center gap-3 w-full justify-center">
             <Image src="/logo.svg" alt="logo" width={40} height={40} />
-            <h2 className="font-bold text-2xl text-black">Short Gen</h2>
+            <h2 className="font-bold text-2xl">Short Gen</h2>
           </div>
           <h2 className=" text-sm text-gray-400 text-center mt-2">
             AI Short Video Generator
@@ -67,22 +67,24 @@ function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
-            <div className=" mx-4 mt-8">
+            <div className=" mx-2 mt-8">
+              <Link href={"/create-new-video"}>
               <Button className="w-full">+Create New Video</Button>
+              </Link>
             </div>
             <SidebarMenu>
               {MenuItems.map((menu, i) => (
-                <SidebarMenuItem key={i} className="mt-4 mx-4">
+                <SidebarMenuItem key={i} className="mt-4 mx-2">
                   <SidebarMenuButton
                     isActive={path == menu.url}
-                    className="p-5"
+                    className="py-5"
                   >
                     <Link
                       href={menu?.url}
                       className=" flex items-center gap-4 p-3"
                     >
                       <menu.icon />
-                      <span className=" font-medium">{menu?.title}</span>
+                      <span className=" font-medium ">{menu?.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

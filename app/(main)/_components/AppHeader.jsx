@@ -12,7 +12,7 @@ function AppHeader() {
       <SidebarTrigger />
       <Image
         className=" rounded-full"
-        src={user?.photoURL}
+        src={user?.pictureURL}
         alt="user"
         width={40}
         height={40}

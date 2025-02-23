@@ -26,7 +26,7 @@ function Header() {
               <Button>Dashboard</Button>
             </Link>
             <Image
-              src={user?.photoURL}
+              src={user?.pictureURL}
               alt="userImage"
               width={40}
               height={40}
